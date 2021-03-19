@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+$darkcolor: #484848;
+$primarycolor: #e32619;
+
+
+body {
+  background-color: #fff;
+  color: $darkcolor;
+}
+
+.container {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fredericka the Great', cursive;
+	margin: .625rem 0;
+  text-transform: capitalize;
+  color: $primarycolor;
+}
+
+.fs-1 {
+  font-size: 3.5rem;
+}
+
+.fs-2 {
+  font-size: 3.25rem;
+}
+
+.fs-3 {
+  font-size: 3rem;
+}
+
+.fs-4 {
+  font-size: 2.75rem;
+}
+
+.fs-5 {
+  font-size: 2.5rem;
+}
+
+.fs-6 {
+  font-size: 2.25rem;
+}
+
+header {
+  height: 100vh;
+  padding: .625rem 0;
+  z-index: 4;
+  .row {
+    height: 100vh;
+  }
+}
+
+.btn-primarycolor {
+  background-color: $primarycolor;
+}
+
+.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin: .625rem 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  margin: 0;
+  padding: .625rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header .main-nav li a {
+  color: #fff;
+}
+
+.bg-gray-gradient-70-to-0 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.365) 0%,transparent);
+}
+
+footer .main-nav li a {
+  color: $primarycolor;
+}
+
+
+.menu-item-img {
+  background-color: #f0f0f0;
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.menu-item-img img {
+  width: 100%;
+  height: auto;
+  /* width: 100%;
+  height: auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.menu-item-img ,
+.menu-item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* header ,
+.intro-area-container {
+  margin-top: -.625rem;
+} */
+
+.intro-area {
+    position: relative;
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/c5/92/41/c59241fa98161a106b9be08dccbd3ac9.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    .text-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+    }
+}
+
+.intro-area::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.75);
+  z-index: 2;
+}
+
+.text-shadow {
+  text-shadow: 0 3px 6px rgba(0,0,0,.5);
+}
+
+footer svg {
+  width: 30px!important;
+  height: 30px!important;
+  margin: .625rem;
+  color: $primarycolor;
+}
+
+@media (min-width: 1024px) {
+  header {
+    height: initial;
+    .row {
+      height: initial;
+    }
+  }
+
+  .main-nav li {
+    margin: 0 .625rem;
+  }
+
+  .intro-area {
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    .text-container p {
+      max-width: 75%;
+      min-width: 600px;
+      font-size: 2.25rem;
+    }
+  }
+
+}
