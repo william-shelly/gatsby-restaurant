@@ -15,7 +15,7 @@ export default function Default({children}) {
                     </div>
             </header>
 
-            <div className="container">
+            <div className="container-fluid mx-0 px-0">
                 {children}
             </div>
 
