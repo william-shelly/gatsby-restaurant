@@ -10,7 +10,7 @@ export default function MenuItemPreview(data) {
                         <p><span dangerouslySetInnerHTML={{ __html: node.description.description}}></span></p>
 
                         <p className="text-center text-lg-left">${node.price}</p>
-                        <a class="btn btn-primarycolor d-sm-inline-block text-white" href="#0">View {node.name}</a>
+                        <a className="btn btn-primarycolor d-sm-inline-block text-white" href="#0">View {node.name}</a>
                     </div>
                 </div>
             ))}

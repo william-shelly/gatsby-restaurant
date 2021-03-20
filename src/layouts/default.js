@@ -1,6 +1,10 @@
 import React from "react"
 import MainNav from "../components/mainnav.js"
 import logo from '../img/kilkennys-logo-white.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function Default({children}) {
     return (
@@ -29,8 +33,8 @@ export default function Default({children}) {
                         <MainNav></MainNav>
                     </div>
                     <div className="col-sm-12 col-lg-2 px-4 py-2 d-flex justify-content-center align-items-center justify-content-lg-end text-white">
-{/*                    <a href="#0" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
-                    <a href="#0" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a> */}
+                    <a href="#0" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
+                    <a href="#0" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a>
                     </div>
                 </div>
                 <div className="row bg-dark">
