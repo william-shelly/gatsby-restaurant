@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Kilkennys",
+    siteUrl: "https://williamshelly.com/"
   },
   plugins: [
     {
