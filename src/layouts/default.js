@@ -1,5 +1,6 @@
 import React from "react"
 import MainNav from "../components/mainnav.js"
+import logo from '../img/kilkennys-logo-white.png';
 
 export default function Default({children}) {
     return (
@@ -7,7 +8,7 @@ export default function Default({children}) {
             <header className="container-fluid position-absolute bg-gray-gradient-70-to-0">
                 <div className="row ml-4 mr-4">
                         <div className="col-sm-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center p-4">
-{/*                            <img src={logo} className="logo" alt="Kilkennys Restaurant" width="298" height="137" /> */}
+                            <img src={logo} className="logo" alt="Kilkennys Restaurant" width="298" height="137" />
                         </div>
                         <div className="col-sm-12 col-lg-6 offset-lg-2 px-4 py-2 d-flex justify-content-center justify-content-lg-end align-items-center">
                             <MainNav></MainNav>
@@ -22,7 +23,7 @@ export default function Default({children}) {
             <footer className="container-fluid">
                 <div className="row bg-dark">
                     <div className="col-sm-12 col-lg-3 d-flex justify-content-center align-items-center p-4">
-{/*                        <img src={logo} className="logo" alt="Kilkennys Restaurant" width="298" height="137" /> */}
+                        <img src={logo} className="logo" alt="Kilkennys Restaurant" width="298" height="137" />
                     </div>
                     <div className="col-sm-12 col-lg-7 d-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center p-4">
                         <MainNav></MainNav>
