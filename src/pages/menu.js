@@ -41,9 +41,9 @@ const MenuPage = ({data}) => {
                       </div>
                     </div>
                     <div className="row">
-                      {data.allContentfulMenuContents.edges.map( ({ node, index}) => (
+{/*                      {data.allContentfulMenuContents.edges.map( ({ node, index}) => (
                         <MenuItemPreview node={node}></MenuItemPreview>
-                      ))}
+                      ))} */ }
                     </div>
                   </div>
                 </div>
