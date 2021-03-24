@@ -45,8 +45,10 @@ const IndexPage = ({data}) => {
 }
 
 export const query = graphql`
-query MyQuery {
-  allContentfulMenuContents {
+query Starters {
+  allContentfulMenuContents(
+    sort: {fields: name, order: ASC}
+  ) {
     edges {
       node {
         id
