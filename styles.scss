@@ -115,6 +115,22 @@ footer .main-nav li a {
   flex-direction: column;
   justify-content: center;
 }
+.menu-item-img {
+  flex-direction: column;
+}
+
+.menu-content-page {
+  padding-top: 200px;
+  .menu-item-img {
+    min-height: 400px;
+  }
+  .menu-item-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+}
 
 /* header ,
 .intro-area-container {
@@ -158,7 +174,7 @@ footer .main-nav li a {
 
 .drop-area {
   position: relative;
-  height: 44vh;
+  height: 30vh;
   min-height: 200px;
   background-image: url(https://i.pinimg.com/originals/c5/92/41/c59241fa98161a106b9be08dccbd3ac9.jpg);
   background-position: center center;
@@ -173,6 +189,7 @@ footer .main-nav li a {
     bottom: 0;
     right: 0;
     z-index: 3;
+    visibility: hidden;
   }
 }
 

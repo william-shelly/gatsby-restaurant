@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 export default function MenuItemPreview({node}) {
     return (
@@ -10,7 +11,7 @@ export default function MenuItemPreview({node}) {
                         <h2>{node.name}</h2>
                         <p><span dangerouslySetInnerHTML={{ __html: node.description.description}}></span></p>
                         <p className="text-center text-lg-left">${node.price}</p>
-                        <a className="btn btn-primarycolor d-sm-inline-block text-white" href="#0">View {node.name}</a>
+                        <Link className="btn btn-primarycolor d-sm-inline-block text-white" to={"/menu-contents/" + node.id}>View {node.name}</Link>
                     </div>
                 </div>
             </div>

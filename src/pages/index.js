@@ -9,7 +9,7 @@ import '../../styles.scss'
 const IndexPage = ({data}) => {
   const businessName = 'Kilkennys';
   const welcomePhrase = 'Welcome to ' + businessName;
-  const menuContents = data.allContentfulMenuContents.edges;
+  // const menuContents = data.allContentfulMenuContents.edges;
   return (
     <Default>
       <main>
@@ -32,7 +32,7 @@ const IndexPage = ({data}) => {
                 </div>
               </div>
               <div className="row">
-                {menuContents.map( ({ node, index}) => (
+                {data.allContentfulMenuContents.edges.map( ({ node, index}) => (
                   <MenuItemPreview node={node}></MenuItemPreview>
                 ))}
               </div>

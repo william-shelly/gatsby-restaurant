@@ -1,12 +1,16 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Default from '../layouts/default.js'
+import MenuItemPreview from '../components/menuitempreview.js'
+import 'bootstrap/dist/css/bootstrap.css'
+import '../../styles.scss'
 
 // markup
 const MenuPage = ({data}) => {
-  const businessName = 'Kilkennys';
-  const welcomePhrase = 'Welcome to ' + businessName;
-  /*const menuContents = data.allContentfulMenuContents.edges; */
+  const businessName = '';
+  const welcomePhrase = '';
+  // const menuContents = data.allContentfulMenuContents.edges;
+
   return (
     <Default>
       <main>
@@ -28,20 +32,21 @@ const MenuPage = ({data}) => {
                   <h2 className="fs-3">Menu</h2>
                 </div>
               </div>
-              <div className="row">
-                {/* {menuContents.map( ({ node, index}) => (
-                  <div className="col-12 col-lg-6 mb-4">
+              <div className="container">
+                <div className="row">
+                  <div className="col-sm-12">
                     <div className="row">
-                      {node.image.file.url ? <div className="menu-item-img col-12 col-lg-6"><img src={node.image.file.url} alt={node.name} loading="lazy" /></div> : undefined }
-                      <div className="menu-item-description col-12 col-lg-6 text-center text-lg-left">
-                          <h2>{node.name}</h2>
-                          <p><span dangerouslySetInnerHTML={{ __html: node.description.description}}></span></p>
-                          <p className="text-center text-lg-left">${node.price}</p>
-                          <a className="btn btn-primarycolor d-sm-inline-block text-white" href="#0">View {node.name}</a>
+                      <div className="col py-2 py-lg-5 d-flex justify-content-center align-items-center">
+                        <h2 className="fs-3">Menu</h2>
                       </div>
                     </div>
+                    <div className="row">
+                      {data.allContentfulMenuContents.edges.map( ({ node, index}) => (
+                        <MenuItemPreview node={node}></MenuItemPreview>
+                      ))}
+                    </div>
                   </div>
-                ))} */}
+                </div>
               </div>
             </div>
           </div>
@@ -50,28 +55,5 @@ const MenuPage = ({data}) => {
     </Default>
   )
 }
-
-{/* export const query = graphql`
-query MyQuery {
-  allContentfulMenuContents {
-    edges {
-      node {
-        id
-        name
-        image {
-          file {
-            url
-          }
-        }
-        description {
-          description
-        }
-        price
-        menuContentsType
-      }
-    }
-  }
-}
-` */}
 
 export default MenuPage
