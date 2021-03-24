@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Default from '../layouts/default.js'
+import MenuItemPreview from '../components/menuitempreview.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../styles.scss'
 
@@ -32,17 +33,7 @@ const IndexPage = ({data}) => {
               </div>
               <div className="row">
                 {menuContents.map( ({ node, index}) => (
-                  <div className="col-12 col-lg-6 mb-4">
-                    <div className="row">
-                      {node.image.file.url ? <div className="menu-item-img col-12 col-lg-6"><img src={node.image.file.url} alt={node.name} loading="lazy" /></div> : undefined }
-                      <div className="menu-item-description col-12 col-lg-6 text-center text-lg-left">
-                          <h2>{node.name}</h2>
-                          <p><span dangerouslySetInnerHTML={{ __html: node.description.description}}></span></p>
-                          <p className="text-center text-lg-left">${node.price}</p>
-                          <a className="btn btn-primarycolor d-sm-inline-block text-white" href="#0">View {node.name}</a>
-                      </div>
-                    </div>
-                  </div>
+                  <MenuItemPreview node={node}></MenuItemPreview>
                 ))}
               </div>
             </div>
@@ -75,31 +66,5 @@ query MyQuery {
   }
 }
 `
-
-/*
-
-query MyQuery {
-  allContentfulMenuContents(filter: {menuContentsType: {eq: "starters"}}) {
-    edges {
-      node {
-        id
-        name
-        image {
-          file {
-            url
-          }
-        }
-        description {
-          description
-        }
-        price
-        menuContentsType
-      }
-    }
-  }
-}
-
-
-*/
 
 export default IndexPage
