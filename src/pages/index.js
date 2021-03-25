@@ -45,7 +45,7 @@ const IndexPage = ({data}) => {
 }
 
 export const query = graphql`
-query Starters {
+query MenuContents {
   allContentfulMenuContents(
     sort: {fields: name, order: ASC}
   ) {
