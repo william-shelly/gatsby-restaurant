@@ -2,16 +2,28 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Default from '../layouts/default.js'
 import MenuItemPreview from '../components/menuitempreview.js'
+// import Helmet from "react-helmet"
+import SEO from "../components/seo.js"
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../styles.scss'
 
 // markup
 const IndexPage = ({data}) => {
   const businessName = 'Kilkennys';
-  const welcomePhrase = 'Welcome to ' + businessName;
+  const welcomePhrase = 'Tulsa\'s Best Irish-American Pub';
   // const menuContents = data.allContentfulMenuContents.edges;
   return (
     <Default>
+{/*      <Helmet>
+        <title>{welcomePhrase} | {businessName}</title>
+        <meta name="description" content="Great Service and the Best Beer Selection!" />
+
+        <meta property="og:title" content={{welcomePhrase} | {businessName}} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://modest-leavitt-89b7df.netlify.app/" />
+        <meta property="og:image" content="https://d33wubrfki0l68.cloudfront.net/605bd99c21e6be0008e7758b/screenshot.png" />
+      </Helmet> */}
+      <SEO description="test"></SEO>
       <main>
         <div className="container-fluid intro-area-container">
           <div className="row">
@@ -45,7 +57,7 @@ const IndexPage = ({data}) => {
 }
 
 export const query = graphql`
-query MenuContents {
+query IndexMenuContents {
   allContentfulMenuContents(
     sort: {fields: name, order: ASC}
   ) {

@@ -213,11 +213,17 @@ footer .main-nav li a {
   text-shadow: 0 3px 6px rgba(0,0,0,.5);
 }
 
-footer svg {
-  width: 30px!important;
-  height: 30px!important;
-  margin: .625rem;
-  color: $primarycolor;
+footer {
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  svg {
+    width: 30px!important;
+    height: 30px!important;
+    margin: .625rem;
+    color: $primarycolor;
+  }
 }
 
 @media (min-width: 1024px) {

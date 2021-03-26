@@ -32,21 +32,10 @@ const MenuPage = ({data}) => {
                   <h2 className="fs-3">Menu</h2>
                 </div>
               </div>
-              <div className="container">
-                <div className="row">
-                  <div className="col-sm-12">
-                    <div className="row">
-                      <div className="col py-2 py-lg-5 d-flex justify-content-center align-items-center">
-                        <h2 className="fs-3">Menu</h2>
-                      </div>
-                    </div>
-                    <div className="row">
-{/*                      {data.allContentfulMenuContents.edges.map( ({ node, index}) => (
-                        <MenuItemPreview node={node}></MenuItemPreview>
-                      ))} */ }
-                    </div>
-                  </div>
-                </div>
+              <div className="row">
+                {data.allContentfulMenuContents.edges.map( ({ node, index}) => (
+                  <MenuItemPreview node={node}></MenuItemPreview>
+                ))}
               </div>
             </div>
           </div>
@@ -55,5 +44,30 @@ const MenuPage = ({data}) => {
     </Default>
   )
 }
+
+export const query = graphql`
+query MenuContents {
+  allContentfulMenuContents(
+    sort: {fields: name, order: ASC}
+  ) {
+    edges {
+      node {
+        id
+        name
+        image {
+          file {
+            url
+          }
+        }
+        description {
+          description
+        }
+        price
+        menuContentsType
+      }
+    }
+  }
+}
+`
 
 export default MenuPage

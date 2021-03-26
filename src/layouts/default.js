@@ -26,10 +26,10 @@ export default function Default({children}) {
 
             <footer className="container-fluid">
                 <div className="row bg-dark">
-                    <div className="col-sm-12 col-lg-3 d-flex justify-content-center align-items-center p-4">
+                    <div className="col-sm-12 col-lg-2 d-flex justify-content-center align-items-center p-4">
                         <img src={logo} className="logo" alt="Kilkennys Restaurant" width="298" height="137" />
                     </div>
-                    <div className="col-sm-12 col-lg-7 d-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center p-4">
+                    <div className="col-sm-12 col-lg-8 d-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-center p-4">
                         <MainNav></MainNav>
                     </div>
                     <div className="col-sm-12 col-lg-2 px-4 py-2 d-flex justify-content-center align-items-center justify-content-lg-end text-white">
