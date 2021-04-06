@@ -1,6 +1,7 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
 import Default from '../layouts/default.js'
+
+export default function Thankyou() {
 
     return (
         <Default>
