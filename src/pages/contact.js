@@ -52,7 +52,7 @@ export default function Contact() {
                             </div>
 
                             <div className="button-container text-right">
-                                <input className="btn btn-danger d-sm-inline-block m-0-auto align-center mr-2" type="button" value="Contact Us" />
+                                <button className="btn btn-danger d-sm-inline-block m-0-auto align-center mr-2" type="submit">Contact Us</button>
                                 <input className="btn btn-danger d-sm-inline-block m-0-auto align-center" type="reset" />
                             </div>
                         </form>
