@@ -26,6 +26,7 @@ export default function Contact() {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                         <form name="contact" method="POST" data-netlify="true" action="/thankyou">
+                            <input type="hidden" name="form-name" value="contact" />
                             <div className="form-group">
                                 <label htmlFor="first_name">First Name</label>
                                 <input type="text" id="first_name" name="first_name" className="form-control" placeholder="Joe" required />
