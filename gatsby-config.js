@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Kilkennys",
@@ -12,8 +16,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "R_6Rq5Q3OrgUeuaqYQFqxLJbn-UQ3HlulFxtezn_Zq4",
-        spaceId: "398kl516wz2c",
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-sass",
